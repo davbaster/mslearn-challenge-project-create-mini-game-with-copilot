@@ -11,6 +11,8 @@ print('Welcome to Rock, Paper, Scissors game!')
 print('What is your name?')
 name = input()
 print('Hello ' + name + '!')
+player = 0
+computer = 0
 
 while True:
     print('Please choose your option: (r)ock, (p)aper, (s)cissors')
@@ -37,12 +39,16 @@ while True:
         print('It is a tie!')
     elif user_input == 'rock' and computer_input == 'scissors':
         print('You won!')
+        player += 1
     elif user_input == 'paper' and computer_input == 'rock':
         print('You won!')
+        player += 1
     elif user_input == 'scissors' and computer_input == 'paper':
         print('You won!')
+        player += 1
     else:
         print('You lost!')
+        computer += 1
 
     print('Do you want to play again? (y)es or (n)o')
     user_input = input()
@@ -51,5 +57,6 @@ while True:
     if user_input == 'y':
         continue
     else:
+        print('Player: ' + str(player) + ' - Computer: ' + str(computer))
         break
 
